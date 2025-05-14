@@ -1,4 +1,4 @@
-package com.example.monogo.poc.model;
+package com.example.monogo.poc.mongo.model;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

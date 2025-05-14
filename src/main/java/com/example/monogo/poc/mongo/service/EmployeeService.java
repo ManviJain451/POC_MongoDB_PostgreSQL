@@ -1,8 +1,8 @@
-package com.example.monogo.poc.service;
+package com.example.monogo.poc.mongo.service;
 
-import com.example.monogo.poc.dto.EmployeeDto;
-import com.example.monogo.poc.model.Employee;
-import com.example.monogo.poc.repository.EmployeeRepository;
+import com.example.monogo.poc.mongo.dto.EmployeeDto;
+import com.example.monogo.poc.mongo.model.Employee;
+import com.example.monogo.poc.mongo.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

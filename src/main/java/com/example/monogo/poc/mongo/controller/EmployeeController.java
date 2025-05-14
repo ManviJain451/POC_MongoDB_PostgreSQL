@@ -1,9 +1,12 @@
-package com.example.monogo.poc.controller;
+package com.example.monogo.poc.mongo.controller;
 
-import com.example.monogo.poc.dto.EmployeeDto;
-import com.example.monogo.poc.service.EmployeeService;
+import com.example.monogo.poc.mongo.dto.EmployeeDto;
+import com.example.monogo.poc.mongo.model.Employee;
+import com.example.monogo.poc.mongo.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,7 +21,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/employee")
-    public void getEmployee(){
-        employeeService.getAllEmployees();
+    public List<Employee> getEmployee(){
+        return employeeService.getAllEmployees();
     }
 }

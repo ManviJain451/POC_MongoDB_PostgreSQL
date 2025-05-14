@@ -1,4 +1,4 @@
-package com.example.monogo.poc.dto;
+package com.example.monogo.poc.mongo.dto;
 
 import lombok.*;
 
