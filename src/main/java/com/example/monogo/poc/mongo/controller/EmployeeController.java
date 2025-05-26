@@ -24,4 +24,29 @@ public class EmployeeController {
     public List<Employee> getEmployee(){
         return employeeService.getAllEmployees();
     }
+
+    @GetMapping("/employees")
+    public List<Employee> getEmployees(
+            @RequestParam String department,
+            @RequestParam String city
+    ) {
+        return employeeService.findActiveInCity(department, city);
+    }
+
+    @GetMapping("/employees/query")
+    public List<Employee> getEmployeesThroughQuery(
+            @RequestParam String department,
+            @RequestParam String city
+    ) throws Exception {
+        return employeeService.findActiveInCityThroughQuery(department, city);
+    }
+
+
+    @GetMapping("/employees/projection")
+    public List<EmployeeDto> getEmployeesThroughProjection(
+            @RequestParam String department,
+            @RequestParam String city
+    ) throws Exception {
+        return employeeService.findThroughProjection(department, city);
+    }
 }
